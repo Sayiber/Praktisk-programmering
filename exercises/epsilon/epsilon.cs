@@ -1,4 +1,5 @@
 using static System.Console;
+using static System.Math;
 
 class epsilon{
     static double x;
@@ -41,8 +42,24 @@ class epsilon{
 
     static void exercise3(){
         WriteLine("\nExercise 3");
-        float tiny = y/2;
-        
+        // float tiny = y/2;
+        // sumA=1+tiny+tiny+...+tiny;
+        // sumB=tiny+tiny+...+tiny+1;
+        // sumA-1 != sumB-1
+
+
+        int n=(int)1e6;
+        double epsilon=Pow(2,-52);
+        double tiny=epsilon/2;
+        double sumA=0,sumB=0;
+
+        sumA+=1; 
+        for(int i=0;i<n;i++){sumA+=tiny;}
+        WriteLine($"sumA-1 = {sumA-1:e} should be {n*tiny:e}");
+
+        for(int i=0;i<n;i++){sumB+=tiny;} 
+        sumB+=1;
+        WriteLine($"sumB-1 = {sumB-1:e} should be {n*tiny:e}");
         
         //WriteLine();
     }
