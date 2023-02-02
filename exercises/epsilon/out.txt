@@ -1,0 +1,15 @@
+Exercise 1
+My max int is 2147483647
+The max int is 2147483647
+
+My min int is -2147483648
+The min int is -2147483648
+
+Exercise 2
+x is 2.22044604925031E-16 and should be 2.22044604925031E-16
+x/2 is 1
+y is 1.192093E-07 and should be 1.19209289550781E-07
+y/2 is 1
+
+Exercise 3
+1.192093E-07
