@@ -11,18 +11,27 @@
     ".." is the parent directory to your current directory.
 
 - At your shell prompt, what does the command !text do?
-    
+    It runs the last command that started with "text".
 
 - At your shell prompt, what does the command !135 do?
-
+    It runs the 135th command in the command history.
 
 - What are the personal configuration files for your shell?
-
+    Shell configuration files are executed automatically when you log in and out of a shell.
+    BASH defines three configurations files: .bash_profile, .bashrc, and .bash_logout. 
+    .bash_profile contains initialization commands that set environment variables, a shell's prompt and so on. 
+    The .bashrc contains commands that configure the shell, define command aliases and set command shell options. 
+    .bash_profile is executed automatically when a user logs into a shell, along with .bashrc. 
+    The .bash_logout file is executed when the user logs out of a shell. 
+    .bash_logout contains cleanup operations and other commands that you want the shell to execute whenever a user logs out of a shell.
 
 - What do the commands echo, time, and date do?
-
+    "echo" displays a line of text.
+    "time" run programs and summarize system resource usage. Example "time make" to see how long it take to makefile.
+    "date" print or sets the system date and time.
 
 - At your system, are echo and time programs or shell commands?
-
+    shell commands (?)
 
 - At your system, does your shell-completion work for the long options and/or Makefile targets?
+    I think so.
