@@ -42,12 +42,7 @@ class epsilon{
 
     static void exercise3(){
         WriteLine("\nExercise 3");
-        // float tiny = y/2;
-        // sumA=1+tiny+tiny+...+tiny;
-        // sumB=tiny+tiny+...+tiny+1;
-        // sumA-1 != sumB-1
-
-
+        
         int n=(int)1e6;
         double epsilon=Pow(2,-52);
         double tiny=epsilon/2;

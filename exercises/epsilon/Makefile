@@ -1,10 +1,10 @@
-out.txt : epsilon.exe
+Out.txt : main.exe
 	mono $^ > $@
 
-epsilon.exe : epsilon.cs
+main.exe : main.cs
 	mcs $^
 
 .PHONEY:clean           # clean is a phoney target
 
 clean:                         
-	rm --force epsilon.exe
+	rm --force Out.txt main.exe

@@ -1,0 +1,28 @@
+- What is your shell?
+    shell is my terminal, for windows PowerShell, for linux bash. 
+
+- In your shell prompt, what do the keys "up", "down", "left", and "right" do?
+    "up" and "down" moves up and down in previous used commands.
+    "left" and "right" moves between the letters in the currently written command.
+
+- What are the "~", ".", and ".." directories?
+    "~" is the users home directory.
+    "." is the current directory
+    ".." is the parent directory to your current directory.
+
+- At your shell prompt, what does the command !text do?
+    
+
+- At your shell prompt, what does the command !135 do?
+
+
+- What are the personal configuration files for your shell?
+
+
+- What do the commands echo, time, and date do?
+
+
+- At your system, are echo and time programs or shell commands?
+
+
+- At your system, does your shell-completion work for the long options and/or Makefile targets?
