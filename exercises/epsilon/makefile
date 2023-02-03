@@ -4,5 +4,7 @@ out.txt : epsilon.exe
 epsilon.exe : epsilon.cs
 	mcs $^
 
+.PHONEY:clean           # clean is a phoney target
+
 clean:                         
-	rm --force out.txt epsilon.exe
+	rm --force epsilon.exe
