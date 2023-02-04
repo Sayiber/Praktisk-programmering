@@ -31,7 +31,13 @@
     "date" print or sets the system date and time.
 
 - At your system, are echo and time programs or shell commands?
-    shell commands (?)
+    Shell commands.
 
 - At your system, does your shell-completion work for the long options and/or Makefile targets?
-    I think so.
+    Yes, shell completion can work for long options and Makefile targets in the bash shell.
+    In bash, tab completion is a built-in feature that can be used to quickly complete long options and Makefile targets. 
+    To use tab completion, you simply start typing the name of a command, option, or target and then press the tab key. 
+    If there is a unique match, bash will automatically complete the text for you. 
+    If there are multiple matches, pressing the tab key twice will display a list of all possible completions.
+    By default, bash supports tab completion for a variety of commands and options, including long options and Makefile targets. 
+    You can also extend this functionality by installing additional completion scripts, either from the shell itself or from third-party sources.
