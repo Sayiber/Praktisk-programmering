@@ -29,6 +29,9 @@ public class vec{
     public static vec operator*(double c, vec v){
         return v*c;
     }
+    public static double operator*(vec u, vec v){
+        return u.dot(v);
+    }
     public static vec operator+(vec u, vec v){
         return new vec(u.x+v.x, u.y+v.y, u.z+v.z);
     }
@@ -38,7 +41,7 @@ public class vec{
     public static vec operator-(vec u){
         return new vec(-u.x, -u.y, -u.z);
     }
-
+    
     public double dot(vec other){
         return this.x*other.x + this.y*other.y + this.z*other.z;
     }

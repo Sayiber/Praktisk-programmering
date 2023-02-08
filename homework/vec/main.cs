@@ -11,6 +11,10 @@ class hwvec{
         WriteLine($"The difference of the two vectors are {u-v}");
         WriteLine($"3 * u is: {3*u}");
         WriteLine($"u * 3 is: {u*3}");
-
+        WriteLine($"-u is: {-u}");
+        WriteLine($"u * v is: {u*v}");
+        WriteLine($"u.dot(v) is: {u.dot(v)}");
+        WriteLine($"u.cross(v) is: {u.cross(v)}");
+        WriteLine($"v.cross(u) is: {v.cross(u)}");
     }
 }

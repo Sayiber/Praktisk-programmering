@@ -4,3 +4,8 @@ The sum of the two vectors are (5 7 9)
 The difference of the two vectors are (-3 -3 -3)
 3 * u is: (3 6 9)
 u * 3 is: (3 6 9)
+-u is: (-1 -2 -3)
+u * v is: 32
+u.dot(v) is: 32
+u.cross(v) is: (-3 6 -3)
+v.cross(u) is: (3 -6 3)
