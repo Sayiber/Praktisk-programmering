@@ -21,6 +21,9 @@ class math{
     }
     static void exercise2(){
         WriteLine($"\nExercise 2");
+        WriteLine($"gamma(-3.5)={sfuns.gamma(-3.5)}");
+        WriteLine($"gamma(-2.5)={sfuns.gamma(-2.5)}");
+        WriteLine($"gamma(-1.5)={sfuns.gamma(-1.5)}");
         WriteLine($"gamma(1)={sfuns.gamma(1)}");
         WriteLine($"gamma(2)={sfuns.gamma(2)}");
         WriteLine($"gamma(3)={sfuns.gamma(3)}");
@@ -29,11 +32,17 @@ class math{
 
     static void exercise3(){
         WriteLine($"\nExercise 3");
+        WriteLine($"lngamma(-3.5) = {sfuns.lngamma(-3.5)}");
+        WriteLine($"lngamma(-2.5) = {sfuns.lngamma(-2.5)}");
+        WriteLine($"lngamma(-1.5) = {sfuns.lngamma(-1.5)}");
         WriteLine($"lngamma(1) = {sfuns.lngamma(1)}");
         WriteLine($"lngamma(2) = {sfuns.lngamma(2)}");
         WriteLine($"lngamma(3) = {sfuns.lngamma(3)}");
         WriteLine($"lngamma(10) = {sfuns.lngamma(10)}");
         WriteLine($"Then we can get");
+        WriteLine($"Exp(lngamma(-3.5)) = {Exp(sfuns.lngamma(-3.5))}");
+        WriteLine($"Exp(lngamma(-2.5)) = {Exp(sfuns.lngamma(-2.5))}");
+        WriteLine($"Exp(lngamma(-1.5)) = {Exp(sfuns.lngamma(-1.5))}");
         WriteLine($"Exp(lngamma(1)) = {Exp(sfuns.lngamma(1))}");
         WriteLine($"Exp(lngamma(2)) = {Exp(sfuns.lngamma(2))}");
         WriteLine($"Exp(lngamma(3)) = {Exp(sfuns.lngamma(3))}");
