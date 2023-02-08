@@ -12,10 +12,15 @@ public class vec{
     }
     public void print(string s){
         Write(s);
-        WriteLine($"{x} {y} {z}");
+        WriteLine($"({x} {y} {z})");
     }
     public void print(){
         this.print("");
+    }
+
+    public override string ToString()
+    {
+        return $"({x} {y} {z})";
     }
 
     public static vec operator*(vec v, double c){
