@@ -1,0 +1,67 @@
+Suppose you have messed something up terribly with the latest (uncommitted) changes to your project. 
+How can you discard all changes you have done to your project since the last commit?
+    To discard all changes in Git since the last commit, you can use the following command:
+    "git reset --hard HEAD"
+    It resets the reposotory to the latest commit discarding all changes in the working tree. 
+    The "--hard" option discards both the changes in the index and the working tree.
+    The "HEAD" reference specifies the latest commit
+
+Suppose you have realized that the last commit contained an error. How can you discard the last commit? The last two commits?
+    To discard the last commit in Git, you can use the following command:
+    "git reset --hard HEAD^"
+    This command resets the repository to the commit before the latest one, discarding the latest commit and all changes in the working tree. 
+    The HEAD^ reference specifies the commit before the latest one
+    
+    To discard the last two commits, you can use the following command:
+    "git reset --hard HEAD~2"
+    The HEAD~2 reference specifies the commit two before the latest one.
+
+Suppose you have committed some changes to your project both at the server (the place where you push) and at your box.
+What do you do now?
+    Revert the commit on your local repository using the "git revert" command. '
+    "git revert HEAD"
+    This will create a new commit that undoes the changes from the previous commit.
+    Push the revert commit to the remote repository.
+    "git push origin master"
+    If the changes have already been pushed to the remote repository and are public, you can force push the revert commit to the remote repository to overwrite the incorrect commit. 
+    Be careful with this step as it can cause conflicts with other contributors if they have pulled the incorrect commit.
+    "git push origin master --force"
+
+What are the values of the following automatic variables in a Makefile: $@, $<, $^?
+    In a Makefile, the following automatic variables have the following values:
+    $@ represents the target of the rule. For example, if the target is all, $@ will be equal to all.
+    $< represents the first dependency of the rule. For example, if the dependencies are main.c, header.h, and footer.c, $< will be equal to main.c.
+    $^ represents all dependencies of the rule, separated by spaces. For example, if the dependencies are main.c, header.h, and footer.c, $^ will be equal to main.c header.h footer.c.
+    These automatic variables can be used to simplify the commands in a Makefile and make it more readable. They are commonly used in build rules to specify dependencies, compile commands, and install commands.
+
+What does this statement do in a Makefile recipe: $(filter %.cs,$^) ?
+    The statement $(filter %.cs,$^) in a Makefile recipe is using the filter function from the make language. The filter function is used to select elements from a list that match a certain pattern.
+    In this case, the pattern is %.cs, which matches all filenames that end with .cs. 
+    The list of elements is $^, which represents all dependencies of the rule.
+    So the statement $(filter %.cs,$^) will evaluate to a list of all dependencies that have a .cs file extension. 
+    This can be used in a Makefile recipe to only operate on a specific type of file, for example, only compiling source files with a .cs extension.
+
+What does this statement do in a Makefile recipe: $(addprefix -reference:,$(filter %.dll,$^)) ?
+    The statement $(addprefix -reference:,$(filter %.dll,$^)) in a Makefile recipe is using two functions from the make language: filter and addprefix.
+    The filter function is used to select elements from a list that match a certain pattern. 
+    In this case, the pattern is %.dll, which matches all filenames that end with .dll.
+    The list of elements is $^, which represents all dependencies of the rule.
+    The addprefix function is used to add a prefix to each element in a list. 
+    In this case, the prefix is -reference:, and the list is the result of the filter function.
+    So the statement $(addprefix -reference:,$(filter %.dll,$^)) will evaluate to a list of all dependencies that have a .dll file extension, with -reference: added as a prefix to each element. 
+    This can be used in a Makefile recipe to pass command line options to a tool, for example, to specify a list of assembly references for a .NET compiler.
+
+When defining a macro in a Makefile, what is the difference between "=" and ":="?
+    In a Makefile, when defining a macro, there is a difference between using = and := as the assignment operator.
+    The operator = defines a simple macro. 
+    The value of the macro will be expanded each time it is used in the Makefile, and the value can change during the execution of the Makefile.
+    "# Simple macro definition
+    MY_VAR = Hello World"
+
+    The operator := defines a simple recursive macro. 
+    The value of the macro will be expanded only once when it is defined, and the value cannot change during the execution of the Makefile.
+    "# Recursive macro definition
+    MY_VAR := Hello World"
+    In general, it is recommended to use := when defining simple macros, as it provides a consistent behavior and makes the Makefile easier to understand and maintain. 
+    The = operator should be used when defining more complex macros that perform computations or string operations, as it allows the macro to be re-evaluated each time it is used.
+    
