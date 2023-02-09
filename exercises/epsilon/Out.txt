@@ -14,3 +14,8 @@ y/2 is 1
 Exercise 3
 sumA-1 = 0.000000e+000 should be 1.110223e-010
 sumB-1 = 1.110223e-010 should be 1.110223e-010
+The difference is from ...
+
+Exercise 4
+approx(a=1e-10, b=1.1e-10) = True
+approx(a=1e-9, b=1.1e-9) = True

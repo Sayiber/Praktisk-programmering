@@ -9,6 +9,7 @@ class epsilon{
         exercise1();
         exercise2();
         exercise3();
+        exercise4();
     }
 
     static void exercise1(){
@@ -55,8 +56,18 @@ class epsilon{
         for(int i=0;i<n;i++){sumB+=tiny;} 
         sumB+=1;
         WriteLine($"sumB-1 = {sumB-1:e} should be {n*tiny:e}");
-        
-        //WriteLine();
+    
+        WriteLine("The difference is from ...");
     }
+
+    static void exercise4(){       
+        WriteLine($"\nExercise 4");
+        WriteLine($"approx(a=1e-10, b=1.1e-10) = {approx(1e-10, 1.1e-10)}");
+        WriteLine($"approx(a=1e-9, b=1.1e-9) = {approx(1e-9, 1.1e-9)}");
+    }
+    static bool approx(double a, double b, double tau = 1e-9, double epsilon = 1e-9){
+            if(Abs(a-b) < tau | Abs(a-b)/(Abs(a)+Abs(b)) < epsilon) return true;
+            return false;
+        }
 }
 
