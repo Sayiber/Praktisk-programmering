@@ -57,7 +57,7 @@ class epsilon{
         sumB+=1;
         WriteLine($"sumB-1 = {sumB-1:e} should be {n*tiny:e}");
     
-        WriteLine("The difference is from ...");
+        WriteLine("The difference is from the binary representation of both the numbers");
     }
 
     static void exercise4(){       
