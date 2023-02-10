@@ -66,6 +66,7 @@ class epsilon{
         WriteLine($"approx(a=1e-9, b=1.1e-9) = {approx(1e-9, 1.1e-9)}");
     }
     static bool approx(double a, double b, double tau = 1e-9, double epsilon = 1e-9){
+        // tau = absolute accuracy, epsilon = relative accuracy
             if(Abs(a-b) < tau | Abs(a-b)/(Abs(a)+Abs(b)) < epsilon) return true;
             return false;
         }
