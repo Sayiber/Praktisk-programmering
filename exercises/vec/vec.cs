@@ -24,21 +24,27 @@ public class vec{
     }
 
     public static vec operator*(vec v, double c){
+        // v*c
         return new vec(c*v.x, c*v.y, c*v.z);
     }
     public static vec operator*(double c, vec v){
+        // c*v
         return v*c;
     }
     public static double operator*(vec u, vec v){
+        // u*v
         return u.dot(v);
     }
     public static vec operator+(vec u, vec v){
+        // u+v
         return new vec(u.x+v.x, u.y+v.y, u.z+v.z);
     }
     public static vec operator-(vec u, vec v){
+        // u-v
         return new vec(u.x-v.x, u.y-v.y, u.z-v.z);
     }
     public static vec operator-(vec u){
+        // -u
         return new vec(-u.x, -u.y, -u.z);
     }
     
